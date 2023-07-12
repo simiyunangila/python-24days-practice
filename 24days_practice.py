@@ -119,4 +119,15 @@ def not_divisible_by_5(numbers):
 
 
     print(not_divisible_by_5([1234,5000,3450,1000,3452]))
-                
+                        
+#                                              Question7
+# Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number is an even number.The numbers obtained should 
+# be printed in a comma-separated sequence on a single line.    
+def even_num():
+    new_list=[]
+    for num in range(1000-1,3000+1):
+        if num % 2 ==0:
+            new_list.append(num)
+    return new_list
+
+print(even_num())            
