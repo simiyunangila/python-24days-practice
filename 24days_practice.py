@@ -103,5 +103,20 @@ def remove_duplicate_sort(inputss):
 
 
 
-print(remove_duplicate_sort("hello world and practice makes perfect and hello world again"))        
-    
+print(remove_duplicate_sort("hello world and practice makes perfect and hello world again"))  
+
+
+#                                            Question6
+# Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are divisible by 5 or not. The numbers 
+# that are divisible by 5 are to be printed in a comma separated sequence.
+
+def not_divisible_by_5(numbers):
+        new_numbers = []
+        for num in numbers:
+            if num % 5 != 0:
+                new_numbers.append(num)
+        return new_numbers
+
+
+    print(not_divisible_by_5([1234,5000,3450,1000,3452]))
+                
