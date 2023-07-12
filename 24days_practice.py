@@ -131,3 +131,22 @@ def even_num():
     return new_list
 
 print(even_num())            
+
+
+#                                          Question8
+# Write a program that accepts a sentence and calculate the number of letters and digits.
+
+def calculate_digits_letters(sentence):
+    result = {"Letters":0,"Digits":0}
+    for i in sentence:
+        if i.isdigit():
+            result["Digits"] +=1
+        elif i.isalpha():
+            result["Letters"] +=1
+        else:
+            pass
+    return result        
+print(calculate_digits_letters("The fox jumped over the lazy fox")) 
+
+
+
