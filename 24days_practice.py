@@ -44,4 +44,64 @@ def generate_dictionary(n):
         ans[i]=i*i
     return ans   
 
-print(generate_dictionary(8))     
+print(generate_dictionary(8))  
+
+
+
+                                                 # question4
+
+# Write a program which accepts a sequence of comma-separated numbers from console and generate a
+#  list and a tuple which contains every number.Suppose the following input is supplied to the program:
+
+
+                                                # Question5
+# Define a class which has at least two methods:
+
+# getString: to get a string from console input
+# printString: to print the string in upper case.
+# Also please include simple test function to test the class methods.
+
+# Hints:
+# Use init method to construct some parameters
+
+                                                # Question:6
+# Write a program that calculates and prints the value according to the given formula:
+
+# Q = Square root of [(2 _ C _ D)/H]
+
+# Following are the fixed values of C and H:
+
+# C is 50. H is 30.
+
+# D is the variable whose values should be input to your program in a comma-separated sequence.For example Let us assume the following comma separated input sequence is given to the program:Question:
+# _Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i _ j.*
+
+# Note: i=0,1.., X-1; j=0,1,¡­Y-1. Suppose the following inputs are given to the program: 3,5
+
+# Then, the output of the program should be:
+
+                                                    # Question:7
+# Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
+                                                     # Question:8
+# Suppose the following input is supplied to the program:
+# Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized.
+
+
+                                                            
+#                                                             DAY 3
+# Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing allduplicate words and sorting them
+#  alphanumerically.
+
+
+def remove_duplicate_sort(inputss):
+    input_string=inputss.split()
+    new = []
+    for word in input_string:
+        if word not in new:
+            new.append(word )
+    return (" ".join(sorted(new)))
+
+
+
+print(remove_duplicate_sort("hello world and practice makes perfect and hello world again"))        
+    
