@@ -149,4 +149,21 @@ def calculate_digits_letters(sentence):
 print(calculate_digits_letters("The fox jumped over the lazy fox")) 
 
 
+# QUESTION9
+# Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
+# Suppose the following input is supplied to the program:Hello world!
+
+def case_letters_count(sentence):
+    counted={"uppercase":0,"lowercase":0}
+    for letter in sentence:
+        if letter.isupper():
+            counted ["uppercase"] +=1
+        elif letter.islower():
+            counted["lowercase"] +=1   
+        else:
+            pass
+    return counted
+print(case_letters_count("Hello world !!"))            
+
+
 
