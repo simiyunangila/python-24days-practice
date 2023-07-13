@@ -165,5 +165,15 @@ def case_letters_count(sentence):
     return counted
 print(case_letters_count("Hello world !!"))            
 
+# question10
+# Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a.
+# Suppose the following input is supplied to the program:9
+
+def get_value(a):
+    sum= a+a**2+a**3+a**4
+    return sum
+print get_value(9)   *** 
+
+
 
 
