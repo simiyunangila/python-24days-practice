@@ -172,8 +172,38 @@ print(case_letters_count("Hello world !!"))
 def get_value(a):
     sum= a+a**2+a**3+a**4
     return sum
-print get_value(9)   *** 
+print get_value(9)   ***
+
+# question11
+# Use a list comprehension to square each odd number in a list. The list is input by a sequence of comma-separated numbers.
+#  >Suppose the following input is supplied to the program: 1,2,3,4,5,6,7,8,9
+
+def square_odd_number(nums):
+    squared = []
+    for i in nums:
+        if i % 2 != 0:
+            squared.append(i*i)
+    return squared
+print(square_odd_number([ 1,2,3,4,5,6,7,8,9]))    
+
+# Question12
+# Write a program that computes the net amount of a bank account based a transaction log from console input. The transaction log 
+# format is shown as following:D 300,D 300,W 200,D 100
+
+def net_bank_account(transaction):
+    account_balance = 0
+    for i  in range(0,len(transaction),2):
+        transaction_type,amount = transaction[i],transaction[i+1]
+        
+        if transaction_type == 'D':
+            account_balance += int(amount)
+        elif transaction_type ==' W':
+            account_balance -= int(amount)
+        else:
+            pass
+    return account_balance
 
 
+print(net_bank_account(['D', 300 ,'D' 300,'W' ,200, 'D ',100]))    
 
-
+        
