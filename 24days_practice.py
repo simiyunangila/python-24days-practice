@@ -197,7 +197,7 @@ def net_bank_account(transaction):
         
         if transaction_type == 'D':
             account_balance += int(amount)
-        elif transaction_type ==' W':
+        elif transaction_type =='W':
             account_balance -= int(amount)
         else:
             pass
