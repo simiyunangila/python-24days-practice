@@ -118,7 +118,7 @@ def not_divisible_by_5(numbers):
         return new_numbers
 
 
-    print(not_divisible_by_5([1234,5000,3450,1000,3452]))
+print(not_divisible_by_5([1234,5000,3450,1000,3452]))
                         
 #                                              Question7
 # Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number is an even number.The numbers obtained should 
@@ -172,9 +172,10 @@ print(case_letters_count("Hello world !!"))
 def get_value(a):
     sum= a+a**2+a**3+a**4
     return sum
-print get_value(9)   ***
 
-# question11
+print( get_value(9) )  
+
+# question11,
 # Use a list comprehension to square each odd number in a list. The list is input by a sequence of comma-separated numbers.
 #  >Suppose the following input is supplied to the program: 1,2,3,4,5,6,7,8,9
 
@@ -204,6 +205,73 @@ def net_bank_account(transaction):
     return account_balance
 
 
-print(net_bank_account(['D', 300 ,'D' 300,'W' ,200, 'D ',100]))    
+print(net_bank_account(['D', 300 ,'D', 300,'W' ,200, 'D ',100]))    
 
-        
+# A website requires the users to input username and password to register. Write a program to check the validity of password input by users.
+# Following are the criteria for checking the password:
+
+# At least 1 letter between [a-z]
+# At least 1 number between [0-9]
+# At least 1 letter between [A-Z]
+# At least 1 character from [$#@]
+# Minimum length of transaction password: 6
+# Maximum length of transaction password: 12
+# Your program should accept a sequence of comma separated passwords and will check them according to the above criteria. Passwords that match the criteria are to be printed, each separated by a comma.
+# Example
+# If the following passwords are given as input to the program:
+# ABd1234@1,a F1#,2w3E*,2We3345
+
+def check(x):
+    cnt = (6 <= len(x) and len(x) <= 12)
+    uppercase_found = False
+    lowercase_found = False
+    numeric_found = False
+    special_char_found = False
+    
+    for i in x:
+        if i.isupper():
+            uppercase_found = True
+        if i.islower():
+            lowercase_found = True
+        if i.isnumeric():
+            numeric_found = True
+        if i == '@' or i == '#' or i == '$':
+            special_char_found = True
+    
+    return cnt and uppercase_found and lowercase_found and numeric_found and special_char_found
+
+s = input("Enter a comma-separated list of strings: ").split(',')
+lst = filter(check, s)
+print(",".join(lst))
+
+# Question:19
+# You are required to write a program to sort the (name, age, score) tuples by ascending order where name is string, age and score are numbers. The tuples are input by console. The sort criteria is:
+
+# 1: Sort based on name
+# 2: Then sort based on age
+# 3: Then sort by score
+# The priority is that name > age > score.
+
+# If the following tuples are given as input to the program:
+
+# Tom,19,80
+# John,20,90
+# Jony,17,91
+# Jony,17,93
+# Json,21,85
+
+
+
+tuples = [
+    ('Tom', 19, 80),
+    ('John', 20, 90),
+    ('Jony', 17, 91),
+    ('Jony', 17, 93)
+]
+
+# Sort the tuples based on name, age, and score
+sorted_tuples = sorted(tuples, key=lambda x: (x[0], x[1], x[2]))
+
+# Print the sorted tuples
+for tuple in sorted_tuples:
+    print(tuple)
